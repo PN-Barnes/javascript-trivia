@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Trivia</title>
+    <link rel="stylesheet" href="assets/styles/reset.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div><h2 id="headerTitle">JavaScript Trivia</h2></div>
+      <nav id="navBar">
+        <ul id="navList">
+          <li><button id="highScoreButton">High Scores</button></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Begin Main Content -->
+    <main>
+      <!-- Start Quiz Content-->
+      <div>
+        <h2 id="mainTitle">Click the Button to start the test</h2>
+        <button id="startButton">Start</button>
+      </div>
+      <!-- Quiz Page Content -->
+      <div id="quiz">
+        <h2 id="timer"></h2>
+        <h2 id="prompt"></h2>
+        <ul id="answerBank">
+          <li id="listButton1"><button id="button1"></button></li>
+          <li id="listButton2"><button id="button2"></button></li>
+          <li id="listButton3"><button id="button3"></button></li>
+          <li id="listButton4"><button id="button4"></button></li>
+        </ul>
+      </div>
+      <div id="gameOver">
+        <h2 id="finalScore"></h2>
+        <form action="">
+          <label for="initials"> initials: </label>
+          <input
+            type="text"
+            id="playerInitials"
+            name="initials"
+            placeholder="Player Initials"
+          />
+        </form>
+        <button></button>
+      </div>
+      <div id="scoreboard">
+        <h1 id="h1highscore">High scores</h1>
+        <div id="scoreitems">
+          ;
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <button id="homeReturn">Return To Home</button>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="assets/script/script.js"></script>
+  </body>
+</html>
