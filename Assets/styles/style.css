@@ -35,11 +35,15 @@ header a:visited {
   font-weight: bold;
 }
 #highScoreButton {
-  font-size: 24px;
   color: black;
-  text-decoration: none;
-  font-weight: 600;
   background-color: #ffffff;
+  display: block;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 #highScoreButton:hover {
@@ -129,22 +133,34 @@ button:hover {
   text-align: center;
 }
 
+#initialForm {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+}
+
 #quizHolder {
   text-align: center;
   font-size: 32px;
   margin: 10px;
   padding: 10px;
 }
-
-#submitButton {
+#buttonDiv {
   display: flex;
   justify-content: center;
   align-content: center;
-  background-color: #993399;
+}
+#scoreSubmit {
+  display: block;
+  background-color: #7a00cc;
   color: whitesmoke;
-  padding: 10px;
-  margin: auto;
-  font-size: 24px;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 #answer {
@@ -157,6 +173,8 @@ button:hover {
 
 #gameOver {
   display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 #scoreitems {

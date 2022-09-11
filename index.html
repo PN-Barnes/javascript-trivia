@@ -37,17 +37,19 @@
         </ul>
       </div>
       <div id="gameOver">
-        <h2 id="finalScore"></h2>
-        <form action="">
-          <label for="initials"> initials: </label>
+        <h2 id="finalScore">final Score</h2>
+        <form id="initialForm" action="">
+          <label for="initials"> Initials: </label>
           <input
             type="text"
             id="playerInitials"
             name="initials"
             placeholder="Player Initials"
           />
-          <button id="scoreSubmit">Submit Score</button>
         </form>
+        <div id="buttonDiv">
+          <button id="scoreSubmit">Submit Score</button>
+        </div>
       </div>
       <div id="scoreboard">
         <h1 id="h1highscore">High scores</h1>
