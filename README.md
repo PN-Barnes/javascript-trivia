@@ -18,7 +18,7 @@ Test your knowledge and then compare your scores inside the highscore section to
 
 The quiz is composed of HTML, CSS, and Javascript to complete the functionality of the test. This uses the local storage of the browser to save the scores to the page and keeping them even after a browser refresh. The javascript consists of even listeners for the button answer choices as well as functions that control the time, the game over functionality, the save score, and the answer key checker to see if answers are correct or not.
 
-![Deployed site](./Assets/images/deployedApp.png)
+![deployed App](./Assets/images/deployedApp.png)
 
 # Installation
 
