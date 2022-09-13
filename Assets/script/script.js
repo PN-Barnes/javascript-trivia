@@ -9,17 +9,22 @@ var scoreTracker = document.getElementById('scoreTracker');
 var prompt = document.getElementById('prompt');
 var answerBank = document.getElementById('answerBank');
 var gameOver = document.getElementById('gameOver');
+var messageDiv = document.getElementById('messageDiv');
 var playerInitials = document.getElementById('playerInitials');
 var submitScore = document.getElementById('scoreSubmit');
 var scoreboard = document.getElementById('scoreboard');
+var highScoresButton = document.getElementById('highScoreButton');
 var scores = document.getElementById('scores');
+var finalScore = document.getElementById('finalScore');
 var returnHome = document.getElementById('homeReturn');
 var createLi = document.createElement('li');
 var scoreBank = [];
 
 // * Display normal state * //
 quizContainer.style.display = 'none';
+timer.style.display = 'hidden';
 gameOver.style.display = 'none';
+messageDiv.style.display = 'none';
 scoreboard.style.display = 'none';
 
 var questionNum = 0;
@@ -116,8 +121,19 @@ answerBank.addEventListener('click', function (event) {
   }
 });
 
+highScoresButton.addEventListener('click', function () {
+  startQuizContent.style.display = 'none';
+  quizContainer.style.display = 'none';
+  timer.style.display = 'none';
+  gameOver.style.display = 'none';
+  messageDiv.style.display = 'none';
+  scoreboard.style.display = 'none';
+  scoreboard.style.display = 'block';
+});
+
 startButton.addEventListener('click', function () {
   setTimer();
+  timer.style.display = 'block';
   quizContainer.style.display = 'block';
   startTest();
   startQuizContent.style.display = 'none';
@@ -125,6 +141,7 @@ startButton.addEventListener('click', function () {
 submitScore.addEventListener('click', function (event) {
   event.preventDefault();
   scoreBank.push(score);
+  messageDiv.style.display = 'block';
   localStorage.setItem('score', score);
   endGame();
 });
@@ -133,11 +150,12 @@ function endGame() {
   quizContainer.style.display = 'none';
   startQuizContent.style.display = 'none';
   gameOver.style.display = 'block';
-
+  finalScore.textContent = `Final Score: ${score}`;
   for (i = 0; i < localStorage.length; i++) {
-    createLi.innerHTML = userinitial.value + ': ' + localStorage.key(i).value;
-    scores.innerHTML = createLI;
+    createLi.innerHTML =
+      playerInitials.value + ': ' + localStorage.key(i).value;
+    scores.innerHTML = createLi;
   }
 }
 
-var highscores = JSON.parse(localStorage.getItem('highscores'));
+var scoreboard = JSON.parse(localStorage.getItem('highscores'));
