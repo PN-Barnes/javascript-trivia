@@ -10,7 +10,8 @@ Test your knowledge and then compare your scores inside the highscore section to
 
 # Deployed Application
 
-[Javascript Trivia](https://pn-barnes.github.io/javascript-trivia/)
+## [Javascript Trivia](https://pn-barnes.github.io/javascript-trivia/)
+
 ![Javascript Code](./Assets/images/jsCode.png)
 ![Deployed Site](./Assets/images/deployedApp.png)
 ![Deployed Site](./Assets/images/deployedApp2.png)
