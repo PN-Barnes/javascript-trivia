@@ -14,9 +14,9 @@ Test your knowledge and then compare your scores inside the highscore section to
 
 ![Javascript Code](./Assets/images/jsCode.png)
 
-![Deployed Site](./Assets/images/deployedApp.png)
+![Deployed site](./Assets/images/deployedApp.png)
 
-![Deployed Site](./Assets/images/deployedApp2.png)
+![Deployed Site 2](./Assets/images/deployedApp2.png)
 
 # Description
 
