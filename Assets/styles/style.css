@@ -50,6 +50,12 @@ header a:visited {
 #scores {
   display: block;
   margin: 60px;
+  justify-content: center;
+}
+
+#scores li {
+  text-align: center;
+  font-size: 24px;
 }
 
 #mainTitle {

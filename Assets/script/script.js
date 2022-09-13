@@ -1,24 +1,33 @@
 //  * Pointer Variables * //
+// ?----------- Home Page Variables -----------? //
 var startQuizContent = document.getElementById('startQuizContent');
 var startButton = document.getElementById('startButton');
+// ? ----------- END HOME PAGE VARIABLES -----------? //
+// *----------- QUIZ Variables -----------* //
 var quizContainer = document.getElementById('quiz');
-var timer = document.getElementById('timer');
 var testTime = 60;
+var timer = document.getElementById('timer');
 var score = 0;
+var scoreBank = [];
 var scoreTracker = document.getElementById('scoreTracker');
 var prompt = document.getElementById('prompt');
 var answerBank = document.getElementById('answerBank');
+// *----------- END QUIZ Variables -----------* //
+// ----------- ENDGAME VARIABLES ----------- //
 var gameOver = document.getElementById('gameOver');
 var messageDiv = document.getElementById('messageDiv');
 var playerInitials = document.getElementById('playerInitials');
 var submitScore = document.getElementById('scoreSubmit');
-var scoreboard = document.getElementById('scoreboard');
-var highScoresButton = document.getElementById('highScoreButton');
 var scores = document.getElementById('scores');
 var finalScore = document.getElementById('finalScore');
 var returnHome = document.getElementById('homeReturn');
 var createLi = document.createElement('li');
-var scoreBank = [];
+// ----------- END ENDGAME VARIABLES ----------- //
+// !----------- SCOREBOARD VARIABLES -----------! //
+var highScoresButton = document.getElementById('highScoreButton');
+var scoreboard = document.getElementById('scoreboard');
+
+// !----------- END SCOREBOARD VARIABLES -----------! //
 
 // * Display normal state * //
 quizContainer.style.display = 'none';
@@ -96,7 +105,7 @@ function startTest() {
     button4.textContent = questionChoices[3];
   }
 }
-
+// ! Event Listeners ! //
 answerBank.addEventListener('click', function (event) {
   userChoice = event.target;
   var questionChoices = questions[questionNum].answers;
@@ -127,8 +136,13 @@ highScoresButton.addEventListener('click', function () {
   timer.style.display = 'none';
   gameOver.style.display = 'none';
   messageDiv.style.display = 'none';
-  scoreboard.style.display = 'none';
   scoreboard.style.display = 'block';
+  for (i = 0; i < localStorage.length; i++) {
+    createLi.innerHTML = `${JSON.parse(
+      localStorage.key(i)
+    )}: ${localStorage.getItem(localStorage.key(i))}`;
+    scoreList.appendChild(createLi);
+  }
 });
 
 startButton.addEventListener('click', function () {
@@ -142,10 +156,18 @@ submitScore.addEventListener('click', function (event) {
   event.preventDefault();
   scoreBank.push(score);
   messageDiv.style.display = 'block';
-  localStorage.setItem('score', score);
+  localStorage.setItem(JSON.stringify(playerInitials.value), score);
   endGame();
 });
-
+returnHome.addEventListener('click', function () {
+  startQuizContent.style.display = 'block';
+  quizContainer.style.display = 'none';
+  timer.style.display = 'hidden';
+  gameOver.style.display = 'none';
+  messageDiv.style.display = 'none';
+  scoreboard.style.display = 'none';
+});
+// ! END Event listeners ! //
 function endGame() {
   quizContainer.style.display = 'none';
   startQuizContent.style.display = 'none';
@@ -158,4 +180,4 @@ function endGame() {
   }
 }
 
-var scoreboard = JSON.parse(localStorage.getItem('highscores'));
+// var scoreboard = JSON.parse(localStorage.getItem('highscores'));
