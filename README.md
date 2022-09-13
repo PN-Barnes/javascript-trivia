@@ -8,9 +8,12 @@ During the quiz, if you select an answer that is correct, your score will be add
 
 Test your knowledge and then compare your scores inside the highscore section to see who has the most knowledge when it comes to javascript.
 
+# Deployed Application
+
+[Javascript Trivia](https://pn-barnes.github.io/javascript-trivia/)
 ![Javascript Code](Assets\images\jsCode.png)
-![Deployed Site](Assets\images\DeployedApp.png)
-![Deployed Site](Assets\images\DeployedApp2.png)
+![Deployed Site](Assets\images\deployedApp.png)
+![Deployed Site](Assets\images\deployedApp2.png)
 
 # Description
 
