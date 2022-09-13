@@ -12,7 +12,7 @@ Test your knowledge and then compare your scores inside the highscore section to
 
 ## [Javascript Trivia](https://pn-barnes.github.io/javascript-trivia/)
 
-![Javascript Code](./Assets/images/jsCode.png)
+![javascript Code](./Assets/images/jsCode.png)
 
 ![Deployed site](./Assets/images/deployedApp.png)
 
