@@ -20,6 +20,8 @@ The quiz is composed of HTML, CSS, and Javascript to complete the functionality 
 
 ![deployed App](./Assets/images/deployed.png)
 
+![deployed App 2](./Assets/images/deployedTwo.png)
+
 # Installation
 
 [github Repository](https://github.com/PN-Barnes/javascript-fundamentals-quiz)
